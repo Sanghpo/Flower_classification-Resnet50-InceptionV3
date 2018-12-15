@@ -74,11 +74,17 @@ A Fully Connected Dense layer to reduce its input to the number of classes using
  ## Accuracy:
  
  Resnet50:(random_initialization)
+ 
  optimiser ='stocastic gradient descent' 
+ 
  loss = categorical cross entropy
+ 
  epoch =10
+ 
  batch_size = 32
+ 
  train_acc = .8006
+ 
  val_acc  = .5032
  
  # Transfer learning:
@@ -86,25 +92,39 @@ A Fully Connected Dense layer to reduce its input to the number of classes using
 Using Pre-trained "Imagenet" weights on Resnet50 and InceptionV3 achitecture and fine tuning the classifier.
 
 ## Accuracy:                       							
+
 Resnet50:(trained on Imagenet)+Dense128+Dense64
+
 optimiser =stochastic gradient descent 
+
 loss = categorical cross entropy
+
 epoch =10
+
 batch_size = 32
+
 train_acc = .9916
+
 val_acc  = .8834
 
 InceptionV3:(trained on Imagenet)+Dense128+Dropout+Dense64
+
 optimiser = stochastic gradient descent  
+
 loss = categorical cross entropy
+
 epoch =10
+
 batch_size = 32
+
 train_acc = .9046
+
 val_acc  = .7956
 
 Note: More data and tweaking hyperparameters would result in better accuracy.
 
 Reference:
-[[Deep Residual Learning for Image Recognition|https://arxiv.org/abs/1512.03385]]
 
-[[Rethinking the Inception Architecture for Computer Vision|https://arxiv.org/abs/1512.00567]]
+[Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)
+
+[Rethinking the Inception Architecture for Computer Vision](https://arxiv.org/abs/1512.00567)
