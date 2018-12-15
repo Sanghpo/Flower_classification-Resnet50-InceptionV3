@@ -4,16 +4,25 @@ State-of-the-art CNN architures for multi-class flower classification using deep
 The notebook can be run on Google colab https://colab.research.google.com/notebooks/welcome.ipynb with GPU/TPU. 
 
 Dataset:
+
+
+
 The dataset is extracted from Kaggle that contains labelled images of flower from five different classes.
 https://www.kaggle.com/alxmamaev/flowers-recognition/kernels
 
 To get the dataset directly from Kaggle to the current session in colab:
-!pip install -q kaggle
-!mkdir -p ~/.kaggle
-!cp kaggle.json ~/.kaggle/
-!chmod 600 ~/.kaggle/kaggle.json
-!kaggle datasets download -d alxmamaev/flowers-recognition
-!unzip flowers-recognition.zip
+
+
+	!pip install -q kaggle
+	
+	!mkdir -p ~/.kaggle
+	
+	!cp kaggle.json ~/.kaggle/
+	
+	!chmod 600 ~/.kaggle/kaggle.json
+	
+	!kaggle datasets download -d alxmamaev/flowers-recognition
+	!unzip flowers-recognition.zip
 
 ResidualNetork(50 layers):
 A powerful Resnet architecture mostly used for image classification.
