@@ -75,51 +75,36 @@ A Fully Connected Dense layer to reduce its input to the number of classes using
  
  Resnet50:(random_initialization)
  
- optimiser ='stocastic gradient descent' 
- 
- loss = categorical cross entropy
- 
- epoch =10
- 
- batch_size = 32
- 
- train_acc = .8006
- 
- val_acc  = .5032
+ * optimiser = stochastic gradient descent 
+ * loss = categorical_crossentropy
+ * epoch =10
+ * batch_size = 32
+ * train_acc = .8006
+ * val_acc  = .5032
  
  # Transfer learning:
 
-Using Pre-trained "Imagenet" weights on Resnet50 and InceptionV3 achitecture and fine tuning the classifier.
+Using Pre-trained "Imagenet" weights on Resnet50 and InceptionV3 architecture and fine tuning the classifier.
 
 ## Accuracy:                       							
 
 Resnet50:(trained on Imagenet)+Dense128+Dense64
 
-optimiser =stochastic gradient descent 
-
-loss = categorical cross entropy
-
-epoch =10
-
-batch_size = 32
-
-train_acc = .9916
-
-val_acc  = .8834
+* optimiser =stochastic gradient descent 
+* loss = categorical_crossentropy
+* epoch =10
+* batch_size = 32
+* train_acc = .9916
+* val_acc  = .8834
 
 InceptionV3:(trained on Imagenet)+Dense128+Dropout+Dense64
 
-optimiser = stochastic gradient descent  
-
-loss = categorical cross entropy
-
-epoch =10
-
-batch_size = 32
-
-train_acc = .9046
-
-val_acc  = .7956
+* optimiser = stochastic gradient descent  
+* loss = categorical_crossentropy
+* epoch =10
+* batch_size = 32
+* train_acc = .9046
+* val_acc  = .7956
 
 Note: More data and tweaking hyperparameters would result in better accuracy.
 
