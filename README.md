@@ -35,7 +35,7 @@ Stage 1:
 
 Zero-padding used to pad the input with a pad of (3,3)
 A 2D Convolution with 64 filters of shape (7,7) and uses a stride of (2,2)
-BatchNormalization applied followed by MaxPooling uses a (3,3) window and a (2,2) stride.
+BatchNormalization applied followed by MaxPooling using a (3,3) window and a (2,2) stride.
 
 
 Stage 2:
@@ -65,15 +65,16 @@ The convolutional block uses three set of filters of size [512, 512, 2048]
 The 2 identity blocks use three set of filters of size [512, 512, 2048]
 The 2D Average Pooling uses a window of shape (2,2) 
 
-The flatten reduces to 1D 
+The flatten reduces to 1D
+
 A Fully Connected Dense layer of size 64 using relu activation
+
 A Fully Connected Dense layer to reduce its input to the number of classes using a softmax activation.
 
 
 # Transfer learning:
 
-
-Using Pre-trained "Imagenet" weights on Resnet50 and InceptionV3 achitecture and fine tuning the classifier
+Using Pre-trained "Imagenet" weights on Resnet50 and InceptionV3 achitecture and fine tuning the classifier.
 
 # Accuracy obtained:
 
