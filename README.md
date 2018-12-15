@@ -1,11 +1,11 @@
-# flower classification Resnet50 and inceptionV3
+# Flower classification resnet50 and inceptionV3
 
 State-of-the-art CNN architectures for multi-class flower classification using deep learning framework Keras.
 
 
 The notebook can be run on Google colab https://colab.research.google.com/notebooks/welcome.ipynb with GPU/TPU. 
 
-Dataset:
+# Dataset:
 
 
 
@@ -26,23 +26,19 @@ To get the dataset directly from Kaggle to the current session in colab:
 	!kaggle datasets download -d alxmamaev/flowers-recognition
 	!unzip flowers-recognition.zip
 
-ResidualNetork(50 layers):
-
+# ResidualNetork(50 layers):
 
 A powerful Resnet architecture mostly used for image classification.
 
 
-Zero-padding used to pad the input with a pad of (3,3)
-
 Stage 1:
 
-
-The 2D Convolution has 64 filters of shape (7,7) and uses a stride of (2,2)
-BatchNorm applied followed by MaxPooling uses a (3,3) window and a (2,2) stride.
+Zero-padding used to pad the input with a pad of (3,3)
+A 2D Convolution with 64 filters of shape (7,7) and uses a stride of (2,2)
+BatchNormalization applied followed by MaxPooling uses a (3,3) window and a (2,2) stride.
 
 
 Stage 2:
-
 
 The convolutional block uses three set of filters of size [64,64,256]
 The 2 identity blocks use three set of filters of size [64,64,256].
@@ -69,16 +65,15 @@ The convolutional block uses three set of filters of size [512, 512, 2048]
 The 2 identity blocks use three set of filters of size [512, 512, 2048]
 The 2D Average Pooling uses a window of shape (2,2) 
 
-The flatten to 1D
+The flatten reduces to 1D 
 A Fully Connected Dense layer of size 64 using relu activation
-
 A Fully Connected Dense layer to reduce its input to the number of classes using a softmax activation.
 
 
-Transfer learning:
+# Transfer learning:
 
 
 Using Pre-trained "Imagenet" weights on Resnet50 and InceptionV3 achitecture and fine tuning the classifier
 
-Accuracy obtained:
+# Accuracy obtained:
 
